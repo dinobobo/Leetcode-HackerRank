@@ -48,6 +48,8 @@ class tree_convert():
                    break
                i += 1   
            return root
+       
+        
         
     def tree2array(self, root):
         arr = []
@@ -70,7 +72,7 @@ class tree_convert():
         return 2*i + 2
     
 test = tree_convert()
-root = test.tree_construct([1,2,3,None, 1,5],0)
+root = test.tree_cons_st([1,2,3,None, 1,5])
 arr = test.tree2array(root)
                 
 
