@@ -21,9 +21,34 @@ class tree_convert():
                 node.right = self.tree_construct(arr, self.right_child(i))
             else:
                 node = None
-            return node            
-                    
-    
+            return node  
+
+#using stack
+    def tree_cons_st(self, arr):
+           i = 0
+           root = TreeNode(arr[i])
+           stack = [root]
+           while True:
+               if self.left_child(i) < len(arr):
+                   if arr[self.left_child(i)]:
+                       stack[i].left = TreeNode(arr[self.left_child(i)])
+                       stack.append(stack[i].left)
+                   else:
+                       stack[i].left = None
+               else:
+                   break
+                       
+               if self.right_child(i) < len(arr):
+                   if arr[self.right_child(i)]:
+                       stack[i].right = TreeNode(arr[self.right_child(i)])
+                       stack.append(stack[i].right)
+                   else:
+                       stack[i].right = None
+               else:
+                   break
+               i += 1   
+           return root
+        
     def tree2array(self, root):
         arr = []
         tree_q = deque([root])       
