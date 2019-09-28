@@ -8,10 +8,6 @@ class TreeNode(object):
         self.right = None
         
         
-        
-        
-        
-        
 class tree_convert():        
     def tree_construct(self, arr, i):
         if i < len(arr):
@@ -70,9 +66,6 @@ class tree_convert():
         return 2*i + 1
     def right_child(self, i):
         return 2*i + 2
-    
-test = tree_convert()
-root = test.tree_cons_st([1,2,3,None, 1,5])
-arr = test.tree2array(root)
+
                 
 
