@@ -30,14 +30,24 @@ class Solution(object):
         if root:
             ans_l = self.sum_helper(root.left)
             ans_r = self.sum_helper(root.right)
-            for i in ans_l:
-                ans.append([root.val] + i)
-            for j in ans_r:
-                ans.append([root.val] + j)
+            if ans_l and ans_r:
+                for i in ans_l:
+                    ans.append([root.val] + i)
+                for j in ans_r:
+                    ans.append([root.val] + j)
+            elif ans_l and not ans_r:
+                for i in ans_l:
+                    ans.append([root.val] + i)
+            elif not ans_l and ans_r:
+                for j in ans_r:
+                    ans.append([root.val] + j)
+            else:
+                ans.append([root.val])            
         return ans
 
-if __name__ == "main":
+if __name__ == "__main__":
     test = [1,0,1,0,1,0,1]
-    root = tree_convert.tree2array(test)
+    cv = tree_convert()
+    root = cv.tree_cons_st(test)
     ans = Solution()
-    ans.sum_helper(root)
+    x = ans.sumRootToLeaf(root)

@@ -26,7 +26,7 @@ class tree_convert():
            stack = [root]
            while True:
                if self.left_child(i) < len(arr):
-                   if arr[self.left_child(i)]:
+                   if arr[self.left_child(i)] != None:
                        stack[i].left = TreeNode(arr[self.left_child(i)])
                        stack.append(stack[i].left)
                    else:
@@ -35,7 +35,7 @@ class tree_convert():
                    break
                        
                if self.right_child(i) < len(arr):
-                   if arr[self.right_child(i)]:
+                   if arr[self.right_child(i)] != None:
                        stack[i].right = TreeNode(arr[self.right_child(i)])
                        stack.append(stack[i].right)
                    else:
