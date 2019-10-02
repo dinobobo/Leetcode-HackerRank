@@ -12,10 +12,15 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
+        if not nums:
+            return -1
         return self.binary_search(0, len(nums), nums, target)
     def binary_search(self, i, j, nums, target):
-        if i - j == 1 and nums[i] != target:
-            return -1
+        if j - i == 1:
+            if nums[i] == target:
+                return i
+            else:
+                return -1
         mid = (i + j)/2
         if nums[mid] == target:
             return mid
@@ -24,15 +29,22 @@ class Solution(object):
                 if nums[i] <= target:
                     ans = self.binary_search(i, mid, nums, target)
                 else:
-                    ans = self.binary_searach(mid + 1, j, nums, target)
+                    if mid + 1 >= j:
+                        return -1
+                    else:
+                        ans = self.binary_search(mid + 1, j, nums, target)
+                    
             else:
                 ans = self.binary_search(i, mid, nums, target)
                     
         else:
             if nums[i] < nums[mid]:
-                ans = self.binary_search(mid + 1, j, nums, target)
+                if mid + 1 >= j:
+                    return -1
+                else:
+                    ans = self.binary_search(mid + 1, j, nums, target)
             else:
-                if nums[j] >= target:
+                if nums[j-1] >= target:
                     ans = self.binary_search(mid + 1, j, nums, target)
                 else:
                     ans = self.binary_search(i, mid, nums, target)
