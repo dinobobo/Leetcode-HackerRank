@@ -11,6 +11,12 @@ Created on Fri Oct  4 21:37:56 2019
 #         self.val = x
 #         self.next = None
 
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
 class Solution(object):
     def partition(self, head, x):
         """
@@ -18,25 +24,16 @@ class Solution(object):
         :type x: int
         :rtype: ListNode
         """
-        if not head or not head.next:
-            return head
-        
-        
-        i = head
-        while i.next:
-            if i.next.val <= x:
-                i = i.next
+        before_ans = before = ListNode(0)
+        after_ans = after = ListNode(0)
+        while head:
+            if head.val < x:
+                before.next = head
+                before = before.next
             else:
-                j = i.next
-                break
-                
-                
-                
-        while j and j.next:
-            if j.next.val < x:
-                node = ListNode(j.next.val)
-                i.next, node.next = node, i.next
-                j.next = j.next.next
-            else:
-                j = j.next
-        return head
+                after.next = head
+                after = after.next
+            head = head.next
+        after.next = None
+        before.next = after_ans.next
+        return before_ans.next
