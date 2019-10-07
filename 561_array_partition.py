@@ -18,3 +18,4 @@ class Solution(object):
             ans += s_num[i]
             i += 2
         return ans
+print(1)
