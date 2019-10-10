@@ -1,4 +1,4 @@
-class Solution {
+class Solution832 {
     public int[][] flipAndInvertImage(int[][] A) {
         int len = A[0].length;
         for(int[] row : A){

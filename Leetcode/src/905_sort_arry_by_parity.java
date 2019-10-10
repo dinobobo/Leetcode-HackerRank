@@ -1,4 +1,4 @@
-class Solution {
+class Solution905 {
     public int[] sortArrayByParity(int[] A) {
         int i = 0;
         int j = 0;

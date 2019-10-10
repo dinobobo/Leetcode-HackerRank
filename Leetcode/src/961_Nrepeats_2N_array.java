@@ -1,4 +1,4 @@
-class Solution {
+class Solution961 {
     public Integer repeatedNTimes(int[] A) {
         int k = 0;
         while((k + 3) < A.length){

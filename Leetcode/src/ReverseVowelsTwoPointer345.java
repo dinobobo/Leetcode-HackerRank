@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution {
+class Solution345 {
     public String reverseVowels(String s) {
         int i = 0;
         int j = s.length() - 1;

@@ -1,5 +1,5 @@
 import static java.lang.Math.abs;
-class Solution {
+class Solution977 {
     public int[] sortedSquares(int[] A) {
         int[] ans = new int[A.length];
         int i = 0;
