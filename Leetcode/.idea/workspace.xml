@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="965d9061-5328-4d91-b35f-3b50e6b441ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Solution557.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/1_two_sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/1_two_sum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/700_search_BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/700_search_BST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/832_flip_image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/832_flip_image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/905_sort_arry_by_parity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/905_sort_arry_by_parity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/961_Nrepeats_2N_array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/961_Nrepeats_2N_array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/977_square_sortedarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/977_square_sortedarray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReverseVowelsTwoPointer345.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReverseVowelsTwoPointer345.java" afterDir="false" />
-    </list>
+    <list default="true" id="965d9061-5328-4d91-b35f-3b50e6b441ac" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +89,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="941" />
     <option name="y" value="28" />
     <option name="width" value="974" />
@@ -202,7 +192,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="941" y="28" width="974" height="1047" extended-state="0" />
+    <frame x="941" y="28" width="974" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26586434" />
