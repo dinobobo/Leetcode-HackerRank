@@ -34,7 +34,7 @@ class Solution(object):
         for i, j in enumerate(t):
             dic[j].append(i)
             
-        
+          
         k = 0
         for i in s:
             if i not in dic.keys():
