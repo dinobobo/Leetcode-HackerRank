@@ -11,26 +11,27 @@ class TreeNode(object):
          self.left = None
          self.right = None
 
-from heapq import heappush, heappop
-
+from collections import deque
 class Solution(object):
     def kthSmallest(self, root, k):
         """
         :type root: TreeNode
         :type k: int
         :rtype: int
-        """ 
-        self.hp = []
-        self.k = k
-        return self.kth_helper(root) 
-    def kth_helper(self, root):
-        if root:
-            self.kth_helper(root.left)
-            heappush(self.hp, root.val)
-            self.k -= 1
-            if self.k == 0:
-                return heappop(self.hp)
-            self.kth_helper(root.right)
+        """
+        st = deque([])
+        ans = []
+        while True:
+            if root:
+                st.append(root)
+                root = root.left
+            elif(st):
+                root = st.pop()
+                ans.append(root.val)
+                k -= 1
+                root = root.right
+                if k == 0:
+                    return ans[-1]
             
         
          
