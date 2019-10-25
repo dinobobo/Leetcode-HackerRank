@@ -25,3 +25,5 @@ class Solution(object):
                     return mid + 1
                 else:
                     l = mid + 1
+                    
+                    

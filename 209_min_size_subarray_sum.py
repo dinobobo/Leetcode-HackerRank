@@ -4,7 +4,7 @@ Created on Thu Oct 24 13:12:48 2019
 
 @author: DinoBob
 """
-
+'''
 class Solution(object):
     def minSubArrayLen(self, s, nums):
         """
@@ -12,6 +12,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        if not nums or sum(nums) < s:
+            return 0 
         sums = [nums[0]] + (len(nums) - 1)*[0]
         for i in range(1, len(nums)):
             sums[i] = sums[i - 1] + nums[i]
@@ -28,14 +30,15 @@ class Solution(object):
         while r > l:
             mid = (l + r)//2
             if sums[mid] > diff:
-                r = mid - 1
+                r = mid
             elif sums[mid] < diff:
                 l = mid + 1
             else:
                 return mid
         if r == len(sums) - 1 and sums[r] < diff:
-            return 0
+            return -1
         else:
             return r
+'''
         
 x = Solution().minSubArrayLen(7 , [2,3,1,2,4,3])
