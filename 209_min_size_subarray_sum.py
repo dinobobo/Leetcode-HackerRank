@@ -40,5 +40,30 @@ class Solution(object):
         else:
             return r
 '''
+
+#double pointer
+class Solution(object):
+    def minSubArrayLen(self, s, nums):
+        if not nums:
+            return 0
+        i = j = 0
+        ans = 2**32 - 1
+        current_s = nums[0]
+        while i < len(nums):
+            if current_s < s and j < len(nums):
+                j += 1
+                if j < len(nums):
+                    current_s += nums[j]
+            else:
+                if current_s >= s:
+                    ans = min(ans, j - i + 1)
+                current_s -= nums[i]
+                i += 1                
+        if ans == 2**32 - 1:
+            return 0
+        else:
+            return ans
         
-x = Solution().minSubArrayLen(7 , [2,3,1,2,4,3])
+        
+        
+x = Solution().minSubArrayLen(11, [1,2,3,4,5])
