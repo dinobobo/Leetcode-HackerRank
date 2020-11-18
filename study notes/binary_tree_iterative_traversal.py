@@ -45,6 +45,27 @@ def inorder_it_2(node):
         else:
             break
 
+def Morris_inorder(node):
+    cur = node
+    while cur != None:
+        if cur.left == None:
+            print(cur.val)
+            cur = cur.right   
+        else:
+            pre = cur.left
+            while pre.right and pre.right != cur:
+                pre = pre.right
+            if pre.right == cur:
+                pre.right = None
+                print(cur.val)
+                cur = cur.right
+            else:
+                pre.right = cur
+                cur = cur.left
+
+
+
+
 
 
 #Pre order iterative root -> left -> right
@@ -59,6 +80,25 @@ def preorder_it(node):
             node_st.append(node.right)
         if node.left:
             node_st.append(node.left)
+
+def Morris_preorder(node):
+    cur = node
+    while cur != None:
+        if cur.left == None:
+            print(cur.val)
+            cur = cur.right   
+        else:
+            pre = cur.left
+            while pre.right and pre.right != cur:
+                pre = pre.right
+            if pre.right == cur:
+                pre.right = None
+                cur = cur.right
+            else:
+                pre.right = cur
+                print(cur.val)
+                cur = cur.left
+                
 
         
 
@@ -122,7 +162,12 @@ first_right.right = tree_node(14)
 
 inorder_it(root)
 inorder_it_2(root)
+Morris_inorder(root)
+
 preorder_it(root)
+Morris_preorder(root)
+
 postorder_it_2st(root)
 postorder_it_1st(root)
+
 
